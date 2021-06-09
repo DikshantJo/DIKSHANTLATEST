@@ -63,23 +63,23 @@
               <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <span>Voucher Information</span>
                 <div class="container-fluid">
-                    <div class="row py-3">
-                        <div class="col-md-6 d-flex">
-                            <div class="col-md-2 itemCenter mr-1">
+                    <div class="row py-3 justify-content-between">
+                        <div class="col-md-5 d-flex">
+                            <div class="col-md-1 itemCenter mr-2">
                                 <input type="radio" name ="c">
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-11">
                                 <div class="input-wrapper w-100">
                                     <input class="fixedDiscountIinput w-100"type="text" id="user" class="w-100" required>
                                     <label class="fixedDiscountILabel" for="user">Days from Date of Purchase</label>
                                   </div>
                           </div>
                         </div>
-                        <div class="col-md-6 d-flex">
-                            <div class="col-md-2 itemCenter mr-1">
+                        <div class="col-md-5 d-flex">
+                            <div class="col-md-1 itemCenter mr-2">
                                 <input type="radio" name ="c">
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-11">
                                 <div class="input-wrapper w-100">
                                     <input class="fixedDiscountIinput w-100"type="text" id="user" class="w-100" required>
                                     <label class="fixedDiscountILabel" for="user">Will expire automatically on</label>
@@ -90,13 +90,13 @@
                     </div>
 
                     <div class="row py-3 justify-content-between">
-                        <div class="col d-flex mr-2">
+                        <div class="col-md-5 d-flex ">
                                 <div class="input-wrapper w-100">
                                     <input class="fixedDiscountIinput w-100"type="text" id="user" class="w-100" required>
                                     <label class="fixedDiscountILabel" for="user">Days from Date of Purchase</label>
                                   </div>
                         </div>
-                        <div class="col d-flex ml-2">
+                        <div class="col-md-5 d-flex ">
                             <div class="input-wrapper w-100">
                                 <input class="fixedDiscountIinput w-100"type="text" id="user" class="w-100" required>
                                 <label class="fixedDiscountILabel" for="user">Days from Date of Purchase</label>
@@ -107,12 +107,13 @@
                     <div class="row py-3">
 
                         <div class="col-md-12">
-                            <div class="col-md-12 itemCenter mr-1">
+                            <div class="col-md-12  mr-1 py-1">
                                 <span>Voucher Printing Mode</span>
                             </div>
                             <div class="col-md-12 d-flex align-items-center">
                                <div class="d-flex align-items-center"><input type="radio" name="c" id="c"> <label for="c">Receipt Printer</label></div>
-                               <div class="d-flex align-items-center"><input type="radio" name="c" id="e"> <label for="e">Receipt Printer</label></div>
+                               <div class="d-flex align-items-center"><input type="radio" name="c" id="e"> <label for="e">Email</label></div>
+                               <div class="d-flex align-items-center"><input type="radio" name="c" id="e"> <label for="e">Plastic Card</label></div>
                           </div>
                         </div>
                         
@@ -266,11 +267,11 @@
                   </div>
               </div>
             </div>
-            <div class="container-fluid d-flex justify-content-center align-items-center pt-4">
+            <!-- <div class="container-fluid d-flex justify-content-center align-items-center pt-4">
                 <button style="background: #FFFFFF;
                 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14);
                 border-radius: 4px; border: none; padding: 10px 20px;">+ ADD ANOTHER GROUP</button>
-            </div>
+            </div> -->
                 </div>
                 <!-- /.col-md-8 -->
               </div>
@@ -291,20 +292,28 @@
     
     </div>
 
-    <!-- <div class="row w-100 mt-auto py-3 save"> 
-        <div class="col-md-12 d-flex justify-content-end" >
+     <div class="row w-100 mt-auto py-3 save"> 
+       <div class="col-md-4 d-flex justify-content-center">
+        <button type="button" class="btn  px-3 mx-2 d-flex justify-content-center align-items-center" style="background-color: #ffffff
+        ;"><svg class="mx-2"width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 8.5L1.06964 8.13336L0.925153 8.5L1.06964 8.86664L2 8.5ZM24 8.5L24.9304 8.86664L25.0748 8.5L24.9304 8.13336L24 8.5ZM13 0C7.57395 0 2.94456 3.37562 1.06964 8.13336L2.93036 8.86664C4.51544 4.84438 8.42605 2 13 2V0ZM1.06964 8.86664C2.94456 13.6244 7.57395 17 13 17V15C8.42605 15 4.51544 12.1556 2.93036 8.13336L1.06964 8.86664ZM13 17C18.4261 17 23.0554 13.6244 24.9304 8.86664L23.0696 8.13336C21.4846 12.1556 17.5739 15 13 15V17ZM24.9304 8.13336C23.0554 3.37562 18.4261 0 13 0V2C17.5739 2 21.4846 4.84438 23.0696 8.86664L24.9304 8.13336ZM13 4.5C10.7877 4.5 9 6.28772 9 8.5H11C11 7.39228 11.8923 6.5 13 6.5V4.5ZM9 8.5C9 10.7123 10.7877 12.5 13 12.5V10.5C11.8923 10.5 11 9.60772 11 8.5H9ZM13 12.5C15.2123 12.5 17 10.7123 17 8.5H15C15 9.60772 14.1077 10.5 13 10.5V12.5ZM17 8.5C17 6.28772 15.2123 4.5 13 4.5V6.5C14.1077 6.5 15 7.39228 15 8.5H17Z" fill="#546E7A"/>
+</svg>
+
+ PREVIEW</button>
+       </div>
+        <div class="col-md-8 d-flex justify-content-end" >
          <button type="button" class="btn  px-3 mx-2 d-flex justify-content-center align-items-center" style="background-color: #ffffff
          ;"><svg class="mx-1" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z" fill="#546E7A"/>
   </svg>
   CANCEL</button>
-         <button type="button" class="btn  px-5 py-1 mx-4  mainbtn" ><svg class="mx-1"width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.54022 12.1924L3.33982 9.16051L2.25 10.1857L6.54022 14.25L15.75 5.52517L14.6679 4.5L6.54022 12.1924Z" fill="white"/>
-  </svg>
-  SAVE</button>
+         <button type="button" class="btn  px-5 py-1 mx-4 itemCenter "style="background:#ffffff;" ><svg class="mx-2"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+          <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+        </svg>
+        CREATE A RETAIL VOUCHER</button>
         </div>
   
-      </div> -->
+      </div> 
    
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->

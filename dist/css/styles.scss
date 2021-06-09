@@ -20,7 +20,7 @@ button:focus{
 
 @mixin centerAlignItems {
     display: flex !important;
-    justify-self: center !important;
+    justify-content: center !important;
     align-items: center !important;
 }
 

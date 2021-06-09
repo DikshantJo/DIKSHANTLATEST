@@ -19,6 +19,62 @@
     <link rel="stylesheet" href="dist/css/promotionManagement.css">
 </head>
 
+<style>
+  .voucherHead{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 13px;
+letter-spacing: 0.33px;
+text-transform: uppercase;
+color: #263238;
+  }
+
+  .inputVoucher{
+    background-color: #F4F6F8;
+  }
+
+  .inputVoucherLabel{
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+/* line-height: 23px; */
+/* identical to box height, or 143% */
+
+letter-spacing: -0.0571429px;
+
+color: #546E7A;}
+
+
+/* BORDER FOR VOUCHER TABS */
+.borderforVoucher{
+border-right: 1px solid #AFBEC4;
+}
+
+.elementLeft{
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: -0.0555556px;
+color: #546E7A;
+}
+
+.fixedDiscountIinput{
+  padding: 12px 0 !important;
+}
+
+.borderVoucherMan{
+border:1px solid #AFBEC4;
+}
+
+.card-group>.card{
+  padding: 0 !important;
+}
+</style>
 
 
 <body>
@@ -33,21 +89,21 @@
     <div id="main-wrapper" class="secondaryBackground" style="min-height:100vh ; max-width: 100vw;">
         <div class="container-fluid marVou w-100">
             <div class="row w-100 pb-3">
-                <div class="col-md-3"><span>Single purpose voucher</span></div>
-                <div class="col-md-9 d-flex justify-content-end"><span><span>NOTE:</span>
+                <div class="col-md-3"><span class="voucherHead">SINGLE PURPOSE VOUCHER</span></div>
+                <div class="col-md-9 d-flex justify-content-end" style="color:#E64D3D;"><span><span style="font-weight: 900;">NOTE:</span>
                      Extra Charges, Staff Discounts, Coupon, Redeem Points, doesn’t apply for Single Purpose Voucher</span></div>
             </div>
             <div class="row w-100 pt-3">
                 <div class="col mr-2">
                     <div class="input-wrapper w-100 ">
-                    <input class="fixedDiscountIinput w-100"type="text" id="user" class="w-100 mx-2" required>
-                    <label class="fixedDiscountILabel" for="user">Voucher Name</label>
+                    <input class="fixedDiscountIinput inputVoucher w-100"type="text" id="user" class="w-100 mx-2" required>
+                    <label class="fixedDiscountILabel inputVoucher inputVoucherLabel" for="user">Voucher Name</label>
                   </div>
                 </div>
                 <div class="col ml-2">
                     <div class="input-wrapper w-100 ">
-                        <input class="fixedDiscountIinput w-100"type="text" id="user" class="w-100 mx-2" required>
-                        <label class="fixedDiscountILabel" for="user">Description </label>
+                        <input class="fixedDiscountIinput w-100 inputVoucher"type="text" id="user" class="w-100 mx-2" required>
+                        <label class="fixedDiscountILabel inputVoucher inputVoucherLabel" for="user">Description </label>
                       </div>
                 </div>
             </div>
@@ -57,45 +113,45 @@
         <div class="container-fluid marVou w-100">
             <div class="container-fluid m-0 p-0">
               <div class="row">
-                <div class="col-md-2 mb-3 ">
+                <div class="col-md-2 mb-3 borderforVoucher ">
                     <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Voucher Info</a>
+              <li class="nav-item  py-2">
+                <a class="px-4 py-2 active elementLeft" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Voucher Info</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Meal Type</a>
+              <li class="nav-item  py-2">
+                <a class="px-4 py-2 elementLeft" id="profile-tab " data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Meal Type</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Tax Setting</a>
+              <li class="nav-item  py-2" >
+                <a class="px-4 py-2 elementLeft" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Tax Setting</a>
               </li>
             </ul>
                 </div>
                 <!-- /.col-md-4 -->
                     <div class="col-md-10 ">
-                  <div class="tab-content p-3 promoCodeModal ml-4" id="myTabContent">
+                  <div class="tab-content p-2 promoCodeModal ml-4" id="myTabContent">
               <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <span>Voucher Information</span>
                 <div class="container-fluid">
                     <div class="row py-3">
                         <div class="col-md-6 d-flex">
-                            <div class="col-md-2 itemCenter mr-1">
+                            <div class="col-md-1 itemCenter mr-1">
                                 <input type="radio" name ="c">
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-11">
                                 <div class="input-wrapper w-100">
                                     <input class="fixedDiscountIinput w-100"type="text" id="user" class="w-100" required>
-                                    <label class="fixedDiscountILabel" for="user">Days from Date of Purchase</label>
+                                    <label class="fixedDiscountILabel inputVoucherLabel" for="user">Days from Date of Purchase</label>
                                   </div>
                           </div>
                         </div>
                         <div class="col-md-6 d-flex">
-                            <div class="col-md-2 itemCenter mr-1">
+                            <div class="col-md-1 itemCenter mr-1">
                                 <input type="radio" name ="c">
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-11">
                                 <div class="input-wrapper w-100">
                                     <input class="fixedDiscountIinput w-100"type="text" id="user" class="w-100" required>
-                                    <label class="fixedDiscountILabel" for="user">Will expire automatically on</label>
+                                    <label class="fixedDiscountILabel inputVoucherLabel" for="user">Will expire automatically on</label>
                                   </div>
                           </div>
                         </div>
@@ -106,13 +162,13 @@
                         <div class="col d-flex mr-2">
                                 <div class="input-wrapper w-100">
                                     <input class="fixedDiscountIinput w-100"type="text" id="user" class="w-100" required>
-                                    <label class="fixedDiscountILabel" for="user">Days from Date of Purchase</label>
+                                    <label class="fixedDiscountILabel inputVoucherLabel" for="user">Days from Date of Purchase</label>
                                   </div>
                         </div>
                         <div class="col d-flex ml-2">
                             <div class="input-wrapper w-100">
                                 <input class="fixedDiscountIinput w-100"type="text" id="user" class="w-100" required>
-                                <label class="fixedDiscountILabel" for="user">Days from Date of Purchase</label>
+                                <label class="fixedDiscountILabel inputVoucherLabel" for="user">Days from Date of Purchase</label>
                               </div>
                         </div>
                         
@@ -120,12 +176,12 @@
                     <div class="row py-3">
 
                         <div class="col-md-12">
-                            <div class="col-md-12 itemCenter mr-1">
+                            <div class="col-md-12 d-flex justify-content-start m-2 ">
                                 <span>Voucher Printing Mode</span>
                             </div>
                             <div class="col-md-12 d-flex align-items-center">
-                               <div class="d-flex align-items-center"><input type="radio" name="c" id="c"> <label for="c">Receipt Printer</label></div>
-                               <div class="d-flex align-items-center"><input type="radio" name="c" id="e"> <label for="e">Receipt Printer</label></div>
+                               <div class="d-flex align-items-center px-4"><input type="radio" name="c" id="c"> <label for="c">Receipt Printer</label></div>
+                               <div class="d-flex align-items-center px-4"><input type="radio" name="c" id="e"> <label for="e">Email</label></div>
                           </div>
                         </div>
                         
@@ -136,7 +192,13 @@
 
 
               <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <span>Meal Type</span>
+                <div class="container-fluid ">
+                  <div class="row w-100 border-bottom py-2">
+                    <div class="col-md-4 d-flex justify-content-start align-items-center"><span>Meal Type</span></div>
+                    <div class="col-md-8 d-flex justify-content-end align-items-center"><input type="radio" name="d" id="d"> <label for="d">Create a New Meal</label>
+                      <input type="radio" name="d" id="e"> <label for="e">Select from Existing Meal</label></div>
+                  </div>
+                </div>
                   <div class="container-fluid">
                       <div class="row py-3 justify-content-between">
                           <div class="col d-flex mr-2">
@@ -174,111 +236,106 @@
 
 
               <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                  <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-4">
-                          <div class="row">
-                            <div class="col-md-4 cell"> 
-                                <div class="card w-100" >
-                                    <div class="card-header">
-                                      Featured
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                      <li class="list-group-item"><input type="checkbox" name="" id=""></li>
-                                      <li class="list-group-item"><input type="checkbox" name="" id=""></li>
-                                      <li class="list-group-item"><input type="checkbox"></li>
-                                    </ul>
-                                  </div> </div>
-                              <div class="col-md-4">
-                                <div class="card w-100" >
-                                    <div class="card-header">
-                                      Featured
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                      <li class="list-group-item"><input type="text" name="" id=""></li>
-                                      <li class="list-group-item"><input type="text" name="" id=""></li>
-                                      <li class="list-group-item"><input type="text"></li>
-                                    </ul>
-                                  </div>
-                              </div> 
-                              
-                              <div class="col-md-4 cell"> 
-                                <div class="card w-100" >
-                                    <div class="card-header">
-                                      Featured
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                      <li class="list-group-item"><input type="text" name="" id=""></li>
-                                      <li class="list-group-item"><input type="text" name="" id=""></li>
-                                      <li class="list-group-item"><input type="text"></li>
-                                    </ul>
-                                  </div>
+                <div class="container-fluid py-2">
+                  <div class="row w-100 border-bottom py-2">
+                    <div class="col-md-4 d-flex justify-content-start align-items-center"><span>Tax Settings</span></div>
+                    <div class="col-md-8 d-flex justify-content-end align-items-center"><input type="radio" name="d" id="d"> <label for="d">Taxable</label>
+                      <input type="radio" name="d" id="e"> <label for="e">Zero TAX</label></div>
+                  </div>
+                </div>
+                  <div class="container-fluid p-4">
+                    <div class="row w-100">
+                      <div class="card-group m-0 borderVoucherMan">
+                          <div class="card  py-0 my-0"   >
+                              <div class="card-header p-0 py-2">
+                                TAX (%)
                               </div>
-                          </div>
-                        </div>
-                        <div class="col-md-8">
-                          <div class="row">
-                              <div class="col-md-2 cell"> 
-                                <div class="card w-100" >
-                                    <div class="card-header">
-                                      Featured
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                      <li class="list-group-item"><input type="text" name="" id=""></li>
-                                      <li class="list-group-item"><input type="text" name="" id=""></li>
-                                      <li class="list-group-item"><input type="text"></li>
-                                    </ul>
+                              <div class="card-body px-0 mx-1">
+                                <div class="container">
+                                  <div class="row w-100 py-2">
+                                    <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" >
+                                    <label for="styled-checkbox-1">VAT</label>
                                   </div>
-                              </div>
-                              <div class="col-md-2 cell"> 
-                                <div class="card w-100" >
-                                    <div class="card-header">
-                                      Featured
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                      <li class="list-group-item"><input type="text" name="" id=""></li>
-                                      <li class="list-group-item"><input type="text" name="" id=""></li>
-                                      <li class="list-group-item"><input type="text"></li>
-                                    </ul>
+                                  <div class="row w-100 py-2">
+                                    <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" >
+                                    <label for="styled-checkbox-1">VAT 5</label>
                                   </div>
+                                  <div class="row w-100 py-2">
+                                    <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" >
+                                    <label for="styled-checkbox-1">Zero Tax</label>
+                                  </div>
+                                </div>
+                                
+                                  
+                                  
                               </div>
-                              <div class="col-md-2 cell"> <div class="card w-100" >
-                                <div class="card-header">
-                                  Featured
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item"><input type="text" name="" id=""></li>
-                                  <li class="list-group-item"><input type="text" name="" id=""></li>
-                                  <li class="list-group-item"><input type="text"></li>
-                                </ul>
-                              </div> </div>
-                              <div class="col-md-2 cell"> <div class="card w-100" >
-                                <div class="card-header">
-                                  Featured
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item"><input type="text" name="" id=""></li>
-                                  <li class="list-group-item"><input type="text" name="" id=""></li>
-                                  <li class="list-group-item"><input type="text"></li>
-                                </ul>
-                              </div> </div>
-                              <div class="col-md-2 cell"> <div class="card w-100" >
-                                <div class="card-header">
-                                  Featured
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item"><input type="text" name="" id=""></li>
-                                  <li class="list-group-item"><input type="text" name="" id=""></li>
-                                  <li class="list-group-item"><input type="text"></li>
-                                </ul>
-                              </div></div>
-                              <div class="col-md-2"></div> <!-- this column empty -->
-                          </div>
-                        </div>
+                            </div>
+                            <div class="card  py-0 my-0"  >
+                              <div class="card-header p-0 py-2">
+                                CUSTOM (%)
+                              </div>
+                              <div class="card-body px-0 mx-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                              </div>
+                            </div>
+                            <div class="card  py-0 my-0"  >
+                              <div class="card-header p-0 py-2">
+                                EAT IN (%)
+                              </div>
+                              <div class="card-body px-0 mx-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                              </div>
+                            </div>
+                            <div class="card  py-0 my-0"  >
+                              <div class="card-header p-0 py-2">
+                                TAKE AWAY (%)
+                              </div>
+                              <div class="card-body px-0 mx-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                              </div>
+                            </div>
+                            <div class="card  py-0 my-0"  >
+                              <div class="card-header p-0 py-2">
+                                DELIVERY (%)
+                              </div>
+                              <div class="card-body px-0 mx-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                              </div>
+                            </div>
+                            <div class="card  py-0 my-0"  >
+                              <div class="card-header p-0 py-2">
+                                DRIVE THRU (%)
+                              </div>
+                              <div class="card-body px-0 mx-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                              </div>
+                            </div>
+                            <div class="card  py-0 my-0"  >
+                              <div class="card-header p-0 py-2">
+                                COLLECTION (%)
+                              </div>
+                              <div class="card-body px-0 mx-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                                <input type="text" class="w-100 p-1 my-1">
+                              </div>
+                            </div>
+
                       </div>
                   </div>
+                  </div>
               </div>
-            </div>
+                </div>
             <div class="container-fluid d-flex justify-content-center align-items-center pt-4">
                 <button style="background: #FFFFFF;
                 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14);
@@ -294,14 +351,6 @@
             <!-- /.container -->
             
         </div>
-        
-        
-     
-       
-        
-
-          
-    
     </div>
 
     <!-- <div class="row w-100 mt-auto py-3 save"> 

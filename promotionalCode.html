@@ -12,6 +12,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="assets/extra-libs/multicheck/multicheck.css">
     <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">   
     <link href="dist/css/style.min.css" rel="stylesheet">
@@ -20,6 +21,15 @@
 </head>
 
 <style>
+
+    .card-group>.card{
+        padding:0 !important;
+       /*  margin: 7px 0 !important; */
+    }
+    .card-group,.card-header{
+        border: 1px solid #E0E0E0;;
+        border-radius: 4px;
+    }
   .inL{
     height: 44px;
     border:1.5px solid #D9D9D9;
@@ -91,11 +101,50 @@ border:none !important;
       margin-left:20px ;
   }
 
+/* ///////////////////////////////////////
+////PROMOTIONAL CODE CSS */
 
+.voucherModalType{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.05px;
+    color: #546E7A;                                              
+}
 
+.eleModalHis{
+ font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
 
+display: flex;
+align-items: center;
 
+color: #3F51B5;
 
+}
+.eleModalHisB{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+padding: 8px 0;
+color: #546E7A;
+}
+
+/* //////////////////////////////////////// */
+@media(max-width:1024px){
+.slidePromoCode{
+width: 100% !important;
+}
+}
 
 
 
@@ -295,7 +344,7 @@ border:none !important;
             </nav>
         </header>
      
-        <aside class="left-sidebar">
+        <aside class="left-sidebar boxShadowSide">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
@@ -314,6 +363,37 @@ border:none !important;
                                 <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-message-outline"></i><span class="hide-menu"> Compare </span></a></li>
                                 <li class="sidebar-item"><a href="settings.html" class="sidebar-link"><i class="mdi mdi-message-outline"></i><span class="hide-menu"> Settings </span></a></li>
                                 <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-message-outline"></i><span class="hide-menu"> Billings </span></a></li>
+                            </ul>
+
+
+
+
+                            <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:Voids(0)" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.00824 19.8205H3.42959C3.19394 19.8205 3 19.6287 3 19.3909V14.4423C3 14.2066 3.19186 14.0127 3.42959 14.0127H5.00824C5.24389 14.0127 5.43783 14.2046 5.43783 14.4423V19.3888C5.43783 19.6266 5.24389 19.8205 5.00824 19.8205ZM3.62562 19.1949H4.81012V14.6404H3.62562V19.1949Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M11.8629 19.9998H10.1383C9.61278 19.9998 9.18527 19.5723 9.18527 19.0468C9.18527 18.7924 9.28537 18.5525 9.46472 18.3732C9.64406 18.1938 9.88388 18.0938 10.1383 18.0938H11.8629C12.3884 18.0938 12.8159 18.5213 12.8159 19.0468C12.8159 19.5723 12.3884 19.9998 11.8629 19.9998ZM10.1383 18.7194C10.0507 18.7194 9.96938 18.7527 9.90682 18.8153C9.84426 18.8779 9.81089 18.9592 9.81089 19.0468C9.81089 19.2261 9.95687 19.3742 10.1383 19.3742H11.8629C12.0423 19.3742 12.1903 19.2282 12.1903 19.0468C12.1903 18.8674 12.0443 18.7194 11.8629 18.7194H10.1383Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M11.8629 18.7196H10.1383C9.94229 18.7196 9.75461 18.6612 9.59403 18.5486C9.33961 18.3713 9.18738 18.0793 9.18738 17.7665V17.7353C9.18738 17.2097 9.61488 16.7822 10.1404 16.7822H11.8629C12.3885 16.7822 12.816 17.2097 12.816 17.7353V17.7665C12.816 18.2921 12.3885 18.7196 11.8629 18.7196ZM10.1383 17.4099C9.95897 17.4099 9.81091 17.5559 9.81091 17.7373V17.7686C9.81091 17.875 9.86305 17.9751 9.95063 18.0376C10.0049 18.0752 10.0695 18.096 10.1383 18.096H11.8629C12.0423 18.096 12.1903 17.95 12.1903 17.7686V17.7373C12.1903 17.558 12.0444 17.4099 11.8629 17.4099H10.1383Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M11.8629 17.41H10.1383C9.61278 17.41 9.18527 16.9825 9.18527 16.457V16.4257C9.18527 15.9002 9.61278 15.4727 10.1383 15.4727H11.8629C12.3884 15.4727 12.8159 15.9002 12.8159 16.4257V16.457C12.8159 16.9825 12.3884 17.41 11.8629 17.41ZM10.1383 16.1004C9.95895 16.1004 9.81089 16.2463 9.81089 16.4278V16.459C9.81089 16.6384 9.95687 16.7865 10.1383 16.7865H11.8629C12.0423 16.7865 12.1903 16.6405 12.1903 16.459V16.4278C12.1903 16.2484 12.0443 16.1004 11.8629 16.1004H10.1383Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M11.8629 16.1004H10.1383C9.61278 16.1004 9.18527 15.6729 9.18527 15.1474C9.18527 14.8929 9.28537 14.6531 9.46472 14.4738C9.64406 14.2944 9.88388 14.1943 10.1383 14.1943H11.8629C12.3884 14.1943 12.8159 14.6218 12.8159 15.1474C12.8159 15.6729 12.3884 16.1004 11.8629 16.1004ZM10.1383 14.82C10.0507 14.82 9.96938 14.8533 9.90682 14.9159C9.84426 14.9784 9.81089 15.0598 9.81089 15.1474C9.81089 15.3267 9.95687 15.4748 10.1383 15.4748H11.8629C12.0423 15.4748 12.1903 15.3288 12.1903 15.1474C12.1903 14.968 12.0443 14.82 11.8629 14.82H10.1383Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M10.1383 20.0001H7.37098C7.18329 20.0001 6.99769 19.9667 6.82043 19.9021C6.64109 19.8354 6.47425 19.7394 6.33036 19.6143C6.16145 19.4704 5.94039 19.3891 5.70891 19.3891H4.81219V14.4467H5.58588C5.85489 14.4467 6.10931 14.3153 6.26572 14.0943L6.52222 13.7314C6.88299 13.2205 7.47107 12.916 8.09461 12.916H10.8703C10.9537 12.916 11.0392 12.9264 11.1205 12.9494C11.2811 12.9932 11.4271 13.0766 11.5439 13.1955C11.719 13.3706 11.817 13.6021 11.8233 13.8482C11.8296 14.1026 11.7315 14.3445 11.5522 14.528C11.3708 14.7136 11.1163 14.82 10.8578 14.82H8.67226L8.94753 17.9794H9.87136L9.95269 18.0357C10.0069 18.0732 10.0716 18.0941 10.1383 18.0941V18.7197C10.0507 18.7197 9.96938 18.753 9.90682 18.8156C9.84425 18.8782 9.81089 18.9595 9.81089 19.0471C9.81089 19.2264 9.95686 19.3745 10.1383 19.3745V20.0001ZM5.43781 18.7635H5.70891C6.09054 18.7635 6.45757 18.8969 6.7391 19.1388C6.82669 19.216 6.92887 19.2744 7.03731 19.314C7.14575 19.3536 7.25836 19.3745 7.37306 19.3745H9.24575C9.20821 19.2723 9.18735 19.1618 9.18735 19.0471C9.18735 18.8907 9.22489 18.7384 9.29579 18.605H8.80156C8.55757 18.605 8.35737 18.4215 8.33651 18.1775L8.00076 14.3153L8.2385 14.2382C8.33026 14.209 8.4241 14.1944 8.52003 14.1944H10.8536C10.9453 14.1944 11.035 14.1568 11.1017 14.0901C11.1643 14.0275 11.1977 13.9462 11.1956 13.8607C11.1935 13.7752 11.1601 13.696 11.0997 13.6376C11.058 13.5959 11.0079 13.5687 10.9537 13.5521C10.9266 13.5437 10.8974 13.5416 10.8682 13.5416H8.09461C7.67336 13.5416 7.27505 13.7481 7.03314 14.0922L6.77664 14.455C6.50345 14.8408 6.05926 15.0723 5.58588 15.0723H5.43781V18.7635Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M10.4991 19.3745H10.1383V20.0001H10.4991V19.3745Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M7.70881 15.9858L7.15826 15.6876L7.70255 14.6804C7.81725 14.4677 8.00702 14.3113 8.2385 14.2383L8.42827 14.8347C8.3532 14.8576 8.29063 14.9098 8.2531 14.9786L7.70881 15.9858Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M12.9202 12.2821L6.70992 12.2758C6.4847 12.2758 6.27407 12.1882 6.11558 12.0297C5.95709 11.8713 5.86951 11.6585 5.86951 11.4354L5.87368 7.21248C5.87368 6.98726 5.96126 6.77664 6.11975 6.61815C6.27824 6.45966 6.48887 6.37207 6.71409 6.37207C6.71409 6.37207 6.71409 6.37207 6.71618 6.37207L12.9265 6.37833L12.9202 12.2821ZM6.71618 6.99769C6.65779 6.99769 6.60565 7.02063 6.56394 7.06025C6.52224 7.09987 6.50138 7.15409 6.50138 7.21248L6.49721 11.4354C6.49721 11.4938 6.52015 11.548 6.55977 11.5876C6.5994 11.6273 6.65362 11.6502 6.71201 11.6502L12.2967 11.6565L12.303 7.00394L6.71618 6.99769Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M6.49512 11.4103L5.0708 11.4082C4.77675 11.4082 4.50148 11.2935 4.29503 11.085C4.08857 10.8765 3.97388 10.6012 3.97388 10.3071L3.97596 8.33227C3.97596 8.03823 4.09066 7.76296 4.2992 7.5565C4.50565 7.35005 4.78093 7.23535 5.07497 7.23535C5.07497 7.23535 5.07497 7.23535 5.07705 7.23535L6.50138 7.23744L6.49512 11.4103ZM5.07497 7.86097C4.81429 7.86097 4.60367 8.0716 4.60158 8.33227L4.5995 10.3071C4.5995 10.4343 4.64746 10.5511 4.73713 10.6408C4.8268 10.7305 4.94567 10.7784 5.0708 10.7805H5.8695L5.87367 7.85888L5.07497 7.86097Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M18.1442 15.6749C18.0586 15.6749 17.9752 15.652 17.9002 15.6061L12.2946 12.1443L12.3009 6.51583L17.9148 3.06868C18.0586 2.98109 18.238 2.97692 18.3861 3.05825C18.532 3.13958 18.6238 3.29598 18.6238 3.4649L18.6092 15.2078C18.6092 15.3767 18.5174 15.531 18.3694 15.6144C18.3006 15.654 18.2234 15.6749 18.1442 15.6749ZM12.9202 11.7961L17.9836 14.9221L17.9961 3.75269L12.9265 6.86618L12.9202 11.7961Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M10.7702 18.607L8.80156 18.6049C8.55756 18.6049 8.35737 18.4214 8.33651 18.1774L8.00076 14.3153L8.2385 14.2381C8.33026 14.2089 8.4241 14.1943 8.52003 14.1943H10.1383V14.82C10.0507 14.82 9.96938 14.8533 9.90681 14.9159C9.84425 14.9784 9.81089 15.0598 9.81089 15.1474C9.81089 15.3267 9.95686 15.4748 10.1383 15.4748V16.1004C9.95895 16.1004 9.81089 16.2464 9.81089 16.4278V16.4591C9.81089 16.6384 9.95686 16.7865 10.1383 16.7865V17.4121C9.95895 17.4121 9.81089 17.5581 9.81089 17.7395V17.7708C9.81089 17.8771 9.86302 17.9772 9.95061 18.0398L10.7702 18.607ZM8.94753 17.9793H9.21029C9.19361 17.9105 9.18735 17.8396 9.18735 17.7687V17.7374C9.18735 17.4913 9.2812 17.2661 9.43552 17.0972C9.2812 16.9283 9.18735 16.7031 9.18735 16.457V16.4257C9.18735 16.1796 9.2812 15.9544 9.43552 15.7855C9.2812 15.6166 9.18735 15.3914 9.18735 15.1453C9.18735 15.0327 9.20612 14.9221 9.24366 14.8179H8.67226L8.94753 17.9793Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M11.3479 13.6585L10.9537 13.5521C10.9266 13.5438 10.8974 13.5417 10.8682 13.5417H7.93406L7.76932 11.6523L11.352 11.6565L11.3479 13.6585ZM8.50755 12.9161H10.7243V12.2821L8.45124 12.28L8.50755 12.9161Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M21.5397 9.03006L20.1279 9.02783L20.1269 9.65345L21.5387 9.65568L21.5397 9.03006Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M20.8906 5.83459L20.558 5.30469L19.2827 6.10509L19.6153 6.63499L20.8906 5.83459Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M20.8852 12.8494L19.6122 12.0454L19.2781 12.5744L20.5512 13.3784L20.8852 12.8494Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                <path d="M11.2689 7.90019L7.97192 7.89648L7.97122 8.5221L11.2682 8.52581L11.2689 7.90019Z" fill="#546E7A" stroke="#546E7A" stroke-width="0.3"/>
+                                </svg>
+                                <span class="hide-menu ml-3">Promotion Management</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level ">
+                                <li class="sidebar-item"><a href="FixedDiscountProm.html" class="sidebar-link"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu"> Fixed Discount </span></a></li>
+                                <li class="sidebar-item"><a href="giftCardProm.html" class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Gift Card </span></a></li>
+                                <li class="sidebar-item"><a href="discountonBill.html" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu">Discount on Bill </span></a></li>
+                                <li class="sidebar-item"><a href="promotionalCode.html" class="sidebar-link"><i class="mdi mdi-bulletin-board"></i><span class="hide-menu">Promotional Codes </span></a></li>
+                                <li class="sidebar-item"><a href="voucherManagement.html" class="sidebar-link"><i class="mdi mdi-message-outline"></i><span class="hide-menu"> Voucher Management </span></a></li>
                             </ul>
                         </li>
                         
@@ -360,18 +440,18 @@ border:none !important;
                           >
                             <div class="modal-dialog rightSlide slidePromoCode" role="document">
                               <div class="modal-content" style="background-color: #ffffff;">
-                                <div class="modal-header itemCenter p-0">
+                                <div class="modal-header itemCenter py-2">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-lg-2 d-flex justify-content-start align-items-center">
                                                 <button
                                     type="button"
-                                    class="close m-0"
+                                    class="close m-0 p-0"
                                     data-dismiss="modal"
                                     aria-label="Close"
                                   >
                                     <span class="itemCenter"style="font-size: 13px" aria-hidden="true"
-                                      ><span class="text-muted h3 px-2 py-1 itemCenter m-0" >&times</span> CLOSE</span
+                                      ><span class="text-muted h3 itemCenter m-0" >&times </span> CLOSE</span
                                     >
                                   </button>
                                             </div>
@@ -384,9 +464,9 @@ border:none !important;
                                    
                                 </div>
             
-                                <div class="modal-body pad">
+                                <div class="modal-body pad py-0">
                                   <div class="container">
-                                    <div class="row my-2">
+                                    <div class="row ">
                                         <div class="col mr-1 fieldWidth">
                                             <div class="input-wrapper w-100 ">
                                                 <input class="fixedDiscountIinput w-100"type="text" id="user" class="w-100 mx-2" required>
@@ -414,9 +494,14 @@ border:none !important;
 
                                     </div>
 
+                                    <div class="row">
+                                        <span class="p-2"style="color:#E64D3D; font-size: 10px;"><span class="text-bold">Single Promocode:</span>
+                                             You can add a code in this section. Using this code your customers can able to get the below discount when conditions are met. ( i.e GET 15, GET10 ).</span>
+                                    </div>
+
                                     <div class="container  promoCodeModal">
                                         <div class="container">
-                                            <div class="row">
+                                            <div class="row border-bottom py-2">
                                                 <div class="col-md-6">
                                                     <span>Single Promo Code Offer</span>
                                                 </div>
@@ -497,84 +582,70 @@ border:none !important;
                                                     <button class="primaryBtnPromo">+ CHANGE HOURS</button>
                                                 </div>
                                             </div>
-                                            <div class="row w-100">
-                                                <div class="card-group">
-                                                    <div class="card" style="width: 18rem;">
-                                                        <div class="card-header">
+                                            <div class="row w-100 py-2">
+                                                <div class="card-group m-0 border-1">
+                                                    <div class="card  py-0 my-0" style="width:130px"  >
+                                                        <div class="card-header py-1 itemCenter ">
                                                           Sun
                                                         </div>
-                                                        <ul class="list-group list-group-flush">
-                                                          <li class="list-group-item border m-2"> <span ><input class="w-75" type="time"></span>
-                                                             </li>
-                                                             <li class="list-group-item border m-2"> <span ><input class="w-75" type="time"></span>
-                                                             </li>
-                                                        </ul>
+                                                        <div class="card-body">
+                                                            <input type="time" class="my-2">
+                                                            <input type="time" class="my-2">
+                                                        </div>
                                                       </div>
-                                                      <div class="card" style="width: 18rem;">
-                                                        <div class="card-header">
+                                                      <div class="card  py-0 my-0" style="width:130px" >
+                                                        <div class="card-header py-1 itemCenter">
                                                           Mon
                                                         </div>
-                                                        <ul class="list-group list-group-flush">
-                                                            <li class="list-group-item border m-2"> <span ><input class="w-75" type="time"></span>
-                                                               </li>
-                                                               <li class="list-group-item border m-2"> <span ><input class="w-75" type="time"></span>
-                                                               </li>
-                                                          </ul>
+                                                        <div class="card-body">
+                                                            <input type="time" class="my-2">
+                                                            <input type="time" class="my-2">
+                                                        </div>
                                                       </div>
-                                                      <div class="card" style="width: 18rem;">
-                                                        <div class="card-header">
+                                                      <div class="card  py-0 my-0" style="width:130px" >
+                                                        <div class="card-header py-1 itemCenter">
                                                           Tue
                                                         </div>
-                                                        <ul class="list-group list-group-flush">
-                                                            <li class="list-group-item border m-2"> <span ><input class="w-75" type="time"></span>
-                                                               </li>
-                                                               <li class="list-group-item border m-2"> <span ><input class="w-75" type="time"></span>
-                                                               </li>
-                                                          </ul>
+                                                        <div class="card-body">
+                                                            <input type="time" class="my-2">
+                                                            <input type="time" class="my-2">
+                                                        </div>
                                                       </div>
-                                                      <div class="card" style="width: 18rem;">
-                                                        <div class="card-header">
+                                                      <div class="card  py-0 my-0" style="width:130px" >
+                                                        <div class="card-header py-1 itemCenter">
                                                           Wed
                                                         </div>
-                                                        <ul class="list-group list-group-flush">
-                                                            <li class="list-group-item border m-2"> <span ><input class="w-75" type="time"></span>
-                                                               </li>
-                                                               <li class="list-group-item border m-2"> <span ><input class="w-75" type="time"></span>
-                                                               </li>
-                                                          </ul>
+                                                        <div class="card-body">
+                                                            <input type="time" class="my-2">
+                                                            <input type="time" class="my-2">
+                                                        </div>
                                                       </div>
-                                                      <div class="card" style="width: 18rem;">
-                                                        <div class="card-header">
+                                                      <div class="card  py-0 my-0" style="width:130px" >
+                                                        <div class="card-header py-1 itemCenter">
                                                         Thu
                                                         </div>
-                                                        <ul class="list-group list-group-flush">
-                                                            <li class="list-group-item border m-2"> <span ><input class="w-75" type="time"></span>
-                                                               </li>
-                                                               <li class="list-group-item border m-2"> <span ><input class="w-75" type="time"></span>
-                                                               </li>
-                                                          </ul>
+                                                        <div class="card-body">
+                                                            <input type="time" class="my-2">
+                                                            <input type="time" class="my-2">
+                                                        </div>
                                                       </div>
-                                                      <div class="card" style="width: 18rem;">
-                                                        <div class="card-header">
+                                                      <div class="card  py-0 my-0" style="width:130px" >
+                                                        <div class="card-header py-1 itemCenter">
                                                           Fri
                                                         </div>
-                                                        <ul class="list-group list-group-flush">
-                                                            <li class="list-group-item border m-2"> <span ><input class="w-75" type="time"></span>
-                                                               </li>
-                                                               <li class="list-group-item border m-2"> <span ><input class="w-75" type="time"></span>
-                                                               </li>
-                                                          </ul>
+                                                        <div class="card-body">
+                                                            <input type="time" class="my-2">
+                                                            <input type="time" class="my-2">
+                                                        </div>
                                                       </div>
-                                                      <div class="card" style="width: 18rem;">
-                                                        <div class="card-header">
+                                                      <div class="card  py-0 my-0" style="width:130px" >
+                                                        <div class="card-header py-1 itemCenter">
                                                           Sat
                                                         </div>
-                                                        <ul class="list-group list-group-flush">
-                                                            <li class="list-group-item border m-0 p-0"> <span class="p-0 m-0"><input class="w-100" type="time"></span>
-                                                               </li>
-                                                               <li class="list-group-item border m-2"> <span ><input class="w-75" type="time"></span>
-                                                               </li>
-                                                          </ul>
+                                                        <div class="card-body">
+                                                            <input type="time" class="my-2">
+                                                            <input type="time" class="my-2">
+                                                        </div>
                                                       </div>
 
                                                 </div>
@@ -650,7 +721,7 @@ border:none !important;
                                   <div class="row w-100">
                                     <div class="col-md-12 d-flex justify-content-end" >
                                       <button type="button" class="btn  px-5 py-1 mainbtn saveBtn w-100" >
-                                           + SAVE</button>
+                                           SUBMIT</button>
                                      </div>
                                   </div>
                                 </div>
@@ -676,28 +747,25 @@ border:none !important;
                         <div class="cardCustom px-0 mx-0" style="box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px -1px 0px #E0E2E4, -1px 0px 0px #E0E2E4, 0px 1px 0px #E0E2E4, 1px 0px 0px #E0E2E4">
                             <div class="card-body border-bottom d-flex justify-content-between align-item-center py-1 px-0">
                                 <div class="cl d-flex align-items-center">
-                                <select id="your-select-id" name="Restaurants" class="dropdownFixed" >
-                                    <option value="">Staff Designation</option>
+                                <select id="your-select-id" name="Restaurants" class="dropdownFixed" style="width:200px">
+                                    <option value="">Offer Type</option>
                                     <option value="The Fat Duck">The Fat Duck</option>
                                     <option value="Restaurant Moor Hall">Restaurant Moor Hall</option>
                                     <option value="L'Enclume">L'Enclume</option>
                                     <option value="Casamia">Casamia</option>
                                   </select>
-                                <select id="your-select-id" name="Restaurants" class="dropdownFixed" >
-                                    <option value="">Staff Designation</option>
+                                <select id="your-select-id" name="Restaurants" class="dropdownFixed" style="width:200px">
+                                    <option value="">Promotion Type</option>
                                     <option value="The Fat Duck">The Fat Duck</option>
                                     <option value="Restaurant Moor Hall">Restaurant Moor Hall</option>
                                     <option value="L'Enclume">L'Enclume</option>
                                     <option value="Casamia">Casamia</option>
                                   </select>
                             
-                                <select id="your-select-id" name="Restaurants" class="dropdownFixed" >
-                                <option value="">Staff Designation</option>
-                                <option value="The Fat Duck">The Fat Duck</option>
-                                <option value="Restaurant Moor Hall">Restaurant Moor Hall</option>
-                                <option value="L'Enclume">L'Enclume</option>
-                                <option value="Casamia">Casamia</option>
-                                
+                                <select id="your-select-id" name="Restaurants" class="dropdownFixed" style="width:200px" >
+                                <option value="">Status</option>
+                                <option value="Active">Active</option>
+                                <option value="Inactive">Inactive</option>
                               </select>
                               <!-- <div style="width: 200px; height: 20px;">
 
@@ -705,7 +773,7 @@ border:none !important;
                             </div>
                                   <div class="form-group has-search mx-2 my-0 searchInput d-flex align-items-center">
                                     <span class="fa fa-search form-control-feedback"></span>
-                                    <input type="text" id="search"class="form-control" placeholder="Search Items">
+                                    <input type="text" id="search"class="form-control" placeholder="Select by Promotion Name">
                                   </div>
                             </div>
                             <table id="zero_config" class="table px-0 mx-0 hover" >
@@ -713,11 +781,9 @@ border:none !important;
                                     <tr>
                                       <th class=" border-0 tableProTitle" scope="col">Promotion Name</th>
                                       <th class=" border-0 tableProTitle" scope="col">Promotion Type</th>
-                                      <th class=" border-0 tableProTitle " scope="col">Discount Type</th>
-                                      <th class=" border-0 mr-2 pr-4" scope="col" style="width: 150px;"></th>
-                                      
+                                      <th class=" border-0 tableProTitle " scope="col">Discount Type</th> 
                                       <th class=" border-0 tableProTitle" scope="col">Statistics</th>
-                                      <th class=" border-0 mr-2 pr-4" scope="col" style="width: 200px;"></th>
+                                      <th class=" border-0 mr-2 pr-4" scope="col" style="width: 100px;"></th>
                                       <th class=" border-0 tableProTitle" scope="col">Actions</th>
                                      
                                     </tr>
@@ -727,7 +793,7 @@ border:none !important;
                                         <th  scope="row" class="tableProElements">Chef - 10%</th>
                                         <td class="tableProElements">Discount on Total Bill</td>
                                         <td class="tableProElements">6</td>
-                                        <td class="tableProElements"></td>
+                                        
                                         <td class="tableProElements d-flex align-items-center justify-content-center flex-column"><span>USED TIMES: 0</span>
                                         <span>Discount: £0.00 </span></td>
                                         
@@ -739,6 +805,8 @@ border:none !important;
                                               primaryBtnPromo
                                                itemCenter
                                             "
+                                            data-target="#historyGift"
+                                            data-toggle="modal"
                                           >
                                           VIEW REPORT
                                           </button></td>
@@ -754,18 +822,20 @@ border:none !important;
                                         <th  scope="row" class="tableProElements">Chef - 10%</th>
                                         <td class="tableProElements">Discount on Total Bill</td>
                                         <td class="tableProElements">6</td>
-                                        <td class="tableProElements"></td>
+                                       
                                         <td class="tableProElements d-flex align-items-center justify-content-center flex-column"><span>USED TIMES: 0</span>
                                         <span>Discount: £0.00 </span></td>
                                         
                                       
-                                        <td class="tableProElements"><button
+                                        <td class="tableProElements" ><button
                                             type="button"
                                             class="
                                               btn
                                               primaryBtnPromo
                                                itemCenter
                                             "
+                                            data-target="#historyGift"
+                                            data-toggle="modal"
                                           >
                                           VIEW REPORT
                                           </button></td>
@@ -781,21 +851,23 @@ border:none !important;
                                         <th  scope="row" class="tableProElements">CINEMA OFFER</th>
                                         <td class="tableProElements">Single Promo Code</td>
                                         <td class="tableProElements">Discount on Items</td>
-                                        <td class="tableProElements"></td>
+                                        
                                         <td class="tableProElements d-flex align-items-center justify-content-center flex-column"><span>USED TIMES: 0</span>
                                         <span>Discount: £0.00 </span></td>
                                         
                                       
-                                      <td class="tableProElements"><button
-                                        type="button"
-                                        class="
-                                          btn
-                                          primaryBtnPromo
-                                           itemCenter
-                                        "
-                                      >
-                                      VIEW REPORT
-                                      </button></td>
+                                        <td class="tableProElements" ><button
+                                            type="button"
+                                            class="
+                                              btn
+                                              primaryBtnPromo
+                                               itemCenter
+                                            "
+                                            data-target="#historyGift"
+                                            data-toggle="modal"
+                                          >
+                                          VIEW REPORT
+                                          </button></td>
                                     
                                     <td class="tableProElements"><div class="row  ">
                                         <div class="col-lg-3 pb-1 mr-3">
@@ -810,6 +882,222 @@ border:none !important;
                         </div>
                     </div>
                 </div>
+
+
+                <!-- /////////////////////////////////////////////////////////////
+                            HISTORY MODAL SLIDE ///////////////////////////////////////////// -->
+                            <div
+                            class="modal right fade"
+                            id="historyGift"
+                            tabindex="-1"
+                            role="dialog"
+                            aria-labelledby="myModalLabel2"
+                          >
+                            <div class="modal-dialog rightSlide slidePromoCode" role="document">
+                              <div class="modal-content" style="background-color: #ffffff;">
+                                <div class="modal-header itemCenter p-0 borderforProModal">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-2 d-flex justify-content-start align-items-center">
+                                                <button
+                                    type="button"
+                                    class="close m-0"
+                                    data-dismiss="modal"
+                                    aria-label="Close"
+                                  >
+                                    <span class="itemCenter"style="font-size: 13px" aria-hidden="true"
+                                      ><span class="text-muted h3 px-2 py-1 d-flex justify-content-start align-item-center m-0" >&times</span> CLOSE</span
+                                    >
+                                  </button>
+                                            </div>
+                                            <div class="col-lg-3 d-flex justify-content-start align-items-center">
+                                                <h4 class="modal-title" id="myModalLabel2">RV Voucher History</h4>
+                                            </div>
+                                            <div class="col-lg-7 d-flex justify-content-around align-item-center">
+                                                <div class="voucherModalType px-2 itemCenter"> <span>Voucher Type:</span> <span>RV</span></div>
+                                                <div class="voucherModalType itemCenter"> <span>Voucher Title:</span> <span>Sample Voucher</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+            
+                                <div class="modal-body pad">
+                                    <div class="container">
+                                        <div class="row w-100 justify-content-between py-2 my-2">
+                                            <div class="col-md-4 d-flex justify-content-center  border-right">
+                                                <div class="row w-100">
+                                                <div class="col-md-6 d-flex flex-column justify-content-center ">
+                                                    <span class="eleModalHis">
+                                                        6/10/22
+                                                    </span>
+                                                    <span class="eleModalHisB">
+                                                        Validity setting
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-6 d-flex flex-column justify-content-center ">
+                                                    <span class="eleModalHis">
+                                                        99
+                                                    </span>
+                                                    <span class="eleModalHisB" >
+                                                        Max allowed sales
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-6 d-flex flex-column justify-content-center ">
+                                                    <span class="eleModalHis">Receipt printer</span>
+                                                    <span class="eleModalHisB">Voucher Printing</span>
+                                                </div>
+                                            </div>
+                                            </div>
+
+                                            <div class="col-md-4 d-flex justify-content-center  border-right">
+                                                <div class="row px-4 w-100">
+                                                <div class="col-md-6 d-flex flex-column justify-content-center ">
+                                                    <span class="eleModalHis">
+                                                        13
+                                                    </span>
+                                                    <span class="eleModalHisB">
+                                                        Sold as of now
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-6 d-flex flex-column justify-content-center ">
+                                                    <span class="eleModalHis">
+                                                        £20
+                                                    </span>
+                                                    <span class="eleModalHisB" >
+                                                       Voucher Price
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-6 d-flex flex-column justify-content-center ">
+                                                    <span class="eleModalHis">80</span>
+                                                    <span class="eleModalHisB">Availible</span>
+                                                </div>
+                                            </div>
+                                            </div>
+
+
+
+                                            <div class="col-md-4 d-flex justify-content-center  border-right">
+                                                <div class="row px-4 w-100">
+                                                <div class="col-md-6 d-flex flex-column justify-content-center ">
+                                                    <span class="eleModalHis">
+                                                        42
+                                                    </span>
+                                                    <span class="eleModalHisB">
+                                                       Used
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-6 d-flex flex-column justify-content-center ">
+                                                    <span class="eleModalHis">
+                                                        50
+                                                    </span>
+                                                    <span class="eleModalHisB" >
+                                                        Unused
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-6 d-flex flex-column justify-content-center ">
+                                                    <span class="eleModalHis">£220</span>
+                                                    <span class="eleModalHisB">Total Sales</span>
+                                                </div>
+                                            </div>
+                                            </div>
+
+
+
+                                            
+
+
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid px-0 pb-3 m-0" style="border-radius: 4px;">
+                                        <!-- ============================================================== -->
+                                        <!-- Start Page Content -->
+                                        <!-- ============================================================== -->
+                                        <div class="row">
+                                            <div class="col-12 px-0 mx-0">
+                                                <div class="cardCustom px-0 mx-0" style="box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px -1px 0px #E0E2E4, -1px 0px 0px #E0E2E4, 0px 1px 0px #E0E2E4, 1px 0px 0px #E0E2E4">
+                                                    <div class="card-body border-bottom d-flex justify-content-between align-item-center py-1 px-0">
+                                                        <div class="cl d-flex align-items-center">
+                                                        <select id="your-select-id" name="Restaurants" class="dropdownFixed" style="width:200px">
+                                                            <option value="">Offer Type</option>
+                                                            <option value="The Fat Duck">The Fat Duck</option>
+                                                            <option value="Restaurant Moor Hall">Restaurant Moor Hall</option>
+                                                            <option value="L'Enclume">L'Enclume</option>
+                                                            <option value="Casamia">Casamia</option>
+                                                          </select>
+                                                        <select id="your-select-id" name="Restaurants" class="dropdownFixed" style="width:200px">
+                                                            <option value="">Promotion Type</option>
+                                                            <option value="The Fat Duck">The Fat Duck</option>
+                                                            <option value="Restaurant Moor Hall">Restaurant Moor Hall</option>
+                                                            <option value="L'Enclume">L'Enclume</option>
+                                                            <option value="Casamia">Casamia</option>
+                                                          </select>
+                                                         </div>
+                                                         <div class="container d-flex justify-content-end">
+                                                            <div class="row my-3 w-50">
+                                                                <div class="col-md-12">
+                                                                  <input type="text" name="daterange" value="s" class="w-100" placeholder="-------" />
+                                                                </div>
+                                                             </div>
+                                                         </div>
+                                                    </div>
+                                                    <table id="zero_config" class="table stripe px-0 mx-0 hover" >
+                                                          <thead style="background-color: #FAFAFA;">
+                                                            <tr>
+                                                              <th class=" border-0 tableProTitle" scope="col">Order ID</th>
+                                                              <th class=" border-0 tableProTitle" scope="col">Debit/Credit Amount</th>
+                                                              <th class=" border-0 tableProTitle " scope="col">Debit/Credit On</th>
+                                                              <th class=" border-0 tableProTitle itemCenter" scope="col">Debit/Credit By</th>
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody class="p-b-2 border-bottom m-b-1">
+                                                            <tr>
+                                                                <th  scope="row" class="tableProElements">A061040/TA68/1609191040/1568639120620	</th>
+                                                                <td class="tableProElements">+ £5.00	</td>
+                                                                <td class="tableProElements">01/11/2020</td>
+                                                                
+                                                                <td class="tableProElements d-flex align-items-center justify-content-center flex-column">
+                                                                <span>Jackson Jim	</span></td>
+                                                              </tr>
+                                                             
+                                                              <tr>
+                                                                <th  scope="row" class="tableProElements">J021995/E27/0511191995/1572972366964	</th>
+                                                                <td class="tableProElements">- £10.00	</td>
+                                                                <td class="tableProElements">01/11/2020	</td>
+                                                              
+                                                                <td class="tableProElements d-flex align-items-center justify-content-center flex-column">
+                                                                <span>Jackson Jim	</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <th  scope="row" class="tableProElements">J021995/E27/0511191995/1572972366964	</th>
+                                                                <td class="tableProElements">- £10.00	</td>
+                                                                <td class="tableProElements">01/11/2020	</td>
+                                                              
+                                                                <td class="tableProElements d-flex align-items-center justify-content-center flex-column">
+                                                                <span>Jackson Jim	</span></td>
+                                                              </tr>
+                                                              
+                                                          </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <div class="row w-100">
+                                    <div class="col-md-12 d-flex justify-content-end" >
+                                      <button type="button" class="btn  px-5 py-1 mainbtn saveBtn w-100" >
+                                           + SAVE</button>
+                                     </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                
             </div>
            
@@ -850,6 +1138,25 @@ border:none !important;
     <script src="assets/extra-libs/multicheck/jquery.multicheck.js"></script>
     <script src="assets/extra-libs/DataTables/datatables.min.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+
+       <!-- ////////////////////////////////////////////////////////////////////
+    DATE RANGE PICKER JS FILES -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+
+     <!-- //////////////////////////////////////////////////////////////////
+    =======================================================================
+    ************DATE RANGE PICKER************************************** -->
+    <script>
+        $(function() {
+            $('input[name="daterange"]').daterangepicker({
+                opens: 'left'
+             }, function(start, end, label) {
+                    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+                });
+        });
+    </script>
 
 
     
